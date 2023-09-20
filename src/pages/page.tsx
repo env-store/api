@@ -10,7 +10,7 @@ const bodySchema = z.object({
   public_key_hash: z.string(),
 });
 
-export default (request: Request) => {
+export default async (request: Request) => {
   const b = request.body;
 
   const c = bodySchema.parse(b);
@@ -21,9 +21,7 @@ export default (request: Request) => {
   const hashed = verifier.digest("hex").toUpperCase();
   const verified = hashed === c.public_key_hash.toUpperCase();
 
-  console.log("verified", verified);
-
-  db.insert(keys).values({
+  await db.insert(keys).values({
     fingerprint: c.fingerprint,
     primary_user_id: c.primary_user_id,
     public_key: c.public_key,

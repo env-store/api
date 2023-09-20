@@ -2,6 +2,9 @@
   "name": "env-api",
   "module": "src/index.ts",
   "type": "module",
+  "scripts": {
+    "dev": "bun --watch run src/index.ts"
+  },
   "devDependencies": {
     "bun-types": "latest",
     "drizzle-kit": "^0.19.13"
@@ -16,6 +19,6 @@
     "bcryptjs": "^2.4.3",
     "drizzle-orm": "^0.28.6",
     "mysql2": "^3.6.1",
-    "xirelta": "^0.0.6"
+    "xirelta": "^0.0.9"
   }
 }
