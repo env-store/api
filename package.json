@@ -6,8 +6,10 @@
     "dev": "bun --watch run src/index.ts"
   },
   "devDependencies": {
+    "@types/react": "^18.2.22",
     "bun-types": "latest",
-    "drizzle-kit": "^0.19.13"
+    "drizzle-kit": "^0.19.13",
+    "@types/bcryptjs": "^2.4.4"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
@@ -15,10 +17,9 @@
   "dependencies": {
     "@planetscale/database": "^1.11.0",
     "@t3-oss/env-core": "^0.6.1",
-    "@types/bcryptjs": "^2.4.4",
     "bcryptjs": "^2.4.3",
     "drizzle-orm": "^0.28.6",
     "mysql2": "^3.6.1",
-    "xirelta": "^0.0.9"
+    "xirelta": "^0.0.11"
   }
 }

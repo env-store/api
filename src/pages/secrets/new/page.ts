@@ -13,6 +13,8 @@ export default async (request: Request) => {
 
   console.log(body);
 
+  return "jello world";
+
   // const res = await db.insert(secrets).values({
   //   allowed_keys: body.allowed_keys,
   //   message: body.message,
