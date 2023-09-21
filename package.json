@@ -20,6 +20,6 @@
     "bcryptjs": "^2.4.3",
     "drizzle-orm": "^0.28.6",
     "mysql2": "^3.6.1",
-    "xirelta": "^0.0.11"
+    "xirelta": "^0.0.13"
   }
 }

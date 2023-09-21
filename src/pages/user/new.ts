@@ -11,6 +11,9 @@ const bodySchema = z.object({
 });
 
 export default async (request: Request) => {
+  console.log(request.body);
+  if (0 == 0) return new Response("ok");
+
   const body = bodySchema.parse(request.body);
 
   if (!verify_public_key(body.public_key, body.public_key_hash)) {
