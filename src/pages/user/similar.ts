@@ -8,11 +8,13 @@ const GetSimilarUserBody = z.object({
   primary_id: z.string(),
 });
 
-export default async (request: Request) => {
-  // const body = GetSimilarUserBody.parse(request.body);
+export const POST = async (request: Request) => {
+  const body = GetSimilarUserBody.parse(request.body);
 
-  const data = await db.select().from(keys);
-  // .where(eq(keys.primary_user_id, body.primary_id));
+  const data = await db
+    .select()
+    .from(keys)
+    .where(eq(keys.primary_user_id, body.primary_id));
 
   return data;
 };

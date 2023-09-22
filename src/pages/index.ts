@@ -1,1 +1,3 @@
-export default async () => new Response("env-store API v0.0.1");
+import pkg from "../../package.json";
+
+export default async () => new Response(`env-store API v${pkg.version}`);

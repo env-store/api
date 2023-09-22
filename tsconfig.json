@@ -22,5 +22,6 @@
     "types": [
       "bun-types" // add Bun global
     ]
-  }
+  },
+  "include": ["src", "*.json"]
 }

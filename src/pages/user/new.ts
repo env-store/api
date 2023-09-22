@@ -5,26 +5,23 @@ import { keys } from "@app/schema";
 
 const bodySchema = z.object({
   fingerprint: z.string(),
-  primary_user_id: z.string(),
-  public_key: z.string(),
-  public_key_hash: z.string(),
+  user_id: z.string(),
+  pubkey: z.string(),
+  pubkey_hash: z.string(),
 });
 
-export default async (request: Request) => {
-  console.log(request.body);
-  if (0 == 0) return new Response("ok");
-
+export const POST = async (request: Request) => {
   const body = bodySchema.parse(request.body);
 
-  if (!verify_public_key(body.public_key, body.public_key_hash)) {
+  if (!verify_public_key(body.pubkey, body.pubkey_hash)) {
     return false;
   }
 
   await db.insert(keys).values({
     fingerprint: body.fingerprint,
-    primary_user_id: body.primary_user_id,
-    public_key: body.public_key,
-    public_key_hash: body.public_key_hash,
+    primary_user_id: body.user_id,
+    public_key: body.pubkey,
+    public_key_hash: body.pubkey_hash,
   });
 
   return true;
