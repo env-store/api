@@ -18,6 +18,8 @@
     "paths": {
       "@app/*": ["*"]
     },
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "allowJs": true,
     "types": [
       "bun-types" // add Bun global

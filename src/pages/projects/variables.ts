@@ -1,5 +1,6 @@
 import { RouteWithParams } from "xirelta";
 import z from "zod";
+
 const GetProjectVariables = z.object({
   projectId: z.string(),
 });
