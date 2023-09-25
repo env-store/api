@@ -1,0 +1,71 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "plugin:unicorn/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "rules": {
+    "@typescript-eslint/ban-types": [
+      "error",
+      {
+        "types": {}
+      }
+    ],
+    "@typescript-eslint/array-type": "error",
+    "@typescript-eslint/consistent-generic-constructors": "error",
+    "@typescript-eslint/consistent-type-definitions": ["error", "type"],
+    "@typescript-eslint/no-floating-promises": "error", // make this an error
+    "@typescript-eslint/no-unused-vars": [
+      "warn", // or "error"
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_",
+        "caughtErrorsIgnorePattern": "^_"
+      }
+    ],
+
+    "unicorn/no-empty-file": "warn",
+    "unicorn/no-array-for-each": "warn",
+    "unicorn/no-null": "off",
+    "unicorn/prefer-node-protocol": "off",
+    "unicorn/filename-case": "off",
+    "unicorn/prevent-abbreviations": "off",
+    "unicorn/no-process-exit": "off",
+    "no-console": [
+      "warn",
+      {
+        "allow": ["warn", "error", "debug", "trace", "info", "fatal"]
+      }
+    ],
+    "no-unused-vars": "off"
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "ignorePatterns": [
+    "*.d.ts",
+    "types.ts",
+    "*.js",
+    "node_modules/**",
+    "dist/**",
+    "**/trpc/**",
+    "**/tests/**",
+    "**/__test__/**",
+    "**/jests/**",
+    "jest.config.ts",
+    "jest.setup.ts",
+    "tsup.config.ts",
+    "coverage/**",
+    "coverage-ts/**",
+    "drizzle.config.ts"
+  ]
+}
