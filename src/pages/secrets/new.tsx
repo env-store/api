@@ -9,7 +9,7 @@ const NewSecretBody = z.object({
   project_id: z.string().nullable().optional().default(null),
 });
 
-export const POST: RouteWithParams<"/secrets/new"> = async (request) => {
+export const POST: RouteWithParams<"GET", "/secrets/new"> = async (request) => {
   const body = NewSecretBody.parse(request.body);
 
   const res = await db

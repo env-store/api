@@ -5,7 +5,7 @@ const GetProjectVariables = z.object({
   projectId: z.string(),
 });
 
-export const POST: RouteWithParams<"/secrets/new"> = async (req) => {
+export const POST: RouteWithParams<"POST", "/secrets/new"> = async (req) => {
   const body = GetProjectVariables.parse(req.body);
 
   return true;

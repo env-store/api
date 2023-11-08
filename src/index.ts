@@ -1,9 +1,6 @@
-import chalk from "chalk";
 import { Logger } from "@imlunahey/logger";
+import chalk from "chalk";
 import { Application } from "xirelta";
-import z from "zod";
-import { db } from "./db";
-import { secrets } from "./schema";
 
 const app = new Application({
   logger: new Logger({
