@@ -18,5 +18,6 @@ try {
 } catch (error: unknown) {
   console.error(`${chalk.red("Error")}: ${(error as Error).message}`);
   await app.stop();
+  // eslint-disable-next-line unicorn/no-process-exit
   process.exit(1);
 }

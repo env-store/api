@@ -18,14 +18,14 @@
     "bun-types": "latest",
     "drizzle-kit": "^0.19.13",
     "eslint": "^8.50.0",
-    "prettier": "^2",
-    "typescript": "^5.2.2",
-    "unicorn": "^0.0.1"
+    "prettier": "2.8.8",
+    "typescript": "^5.2.2"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
   "dependencies": {
+    "@types/prettier": "^2.7.3",
     "@planetscale/database": "^1.11.0",
     "bcryptjs": "^2.4.3",
     "drizzle-orm": "^0.28.6",

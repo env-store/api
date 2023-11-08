@@ -8,9 +8,7 @@ const GetAllBody = z.object({
   project_id: z.string(),
 });
 
-export const GET: RouteWithParams<"GET", "/secrets/get_all"> = async (
-  request
-) => {
+export const GET: RouteWithParams<"GET", "/secrets/get_all"> = async (request) => {
   const body = GetAllBody.parse(request.query);
 
   const res = await db

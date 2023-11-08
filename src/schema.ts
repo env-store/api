@@ -1,11 +1,4 @@
-import {
-  int,
-  text,
-  mysqlTable,
-  mysqlSchema,
-  json,
-  varchar,
-} from "drizzle-orm/mysql-core";
+import { int, json, mysqlSchema, text, varchar } from "drizzle-orm/mysql-core";
 
 export const schema = mysqlSchema("env");
 
